@@ -1,7 +1,10 @@
 // ex3.js
+function func(number){
+   setTimeout(() => console.log(number), 0);
+}
 function run() {
   for (var i = 0; i < 3; i++) {
-    setTimeout(() => console.log(i), 0);
+    func(i);
   }
 }
 

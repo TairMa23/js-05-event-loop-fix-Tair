@@ -13,14 +13,12 @@ function run() {
 
   loadUser((name) => {
     user = name;
+    console.log("User: " + user);
+    loadOrders((count) => {
+      orders = count;
+      console.log("Orders: " + orders);
+    });
   });
-
-  loadOrders((count) => {
-    orders = count;
-  });
-
-  console.log("User: " + user);
-  console.log("Orders: " + orders);
 }
 
 if (typeof module !== "undefined") module.exports = { run };
